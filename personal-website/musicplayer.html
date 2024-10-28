@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player - UMD Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/music-player.css">
+</head>
+<body>
+    <header class="header">
+        <h1>UMD Student Portfolio</h1>
+    </header>
+    
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html">Home</a>
+            <a href="aboutme.html">About</a>
+            <a href="resume.html">Resume</a>
+            <a href="projects.html">Portfolio</a>
+            <a href="game.html">Game</a>
+            <a href="discovery.html">Discovery</a>
+            <a href="contactme.html">Contact</a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="card music-player-container">
+            <h2>Music Player</h2>
+            
+            <div class="music-player">
+                <div class="song-info">
+                    <img id="albumArt" src="images/album-art.jpg" alt="Album Art" class="album-art">
+                    <div class="track-details">
+                        <h3 id="songTitle">Song Title</h3>
+                        <p id="artistName">Artist Name</p>
+                    </div>
+                </div>
+
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress" id="progress"></div>
+                    </div>
+                    <div class="time-stamps">
+                        <span id="currentTime">0:00</span>
+                        <span id="duration">0:00</span>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button id="prevBtn" class="control-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="19 20 9 12 19 4 19 20"></polygon>
+                            <line x1="5" y1="19" x2="5" y2="5"></line>
+                        </svg>
+                    </button>
+                    
+                    <button id="playBtn" class="control-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                    </button>
+                    
+                    <button id="nextBtn" class="control-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="5 4 15 12 5 20 5 4"></polygon>
+                            <line x1="19" y1="5" x2="19" y2="19"></line>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="volume-control">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                        <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                        <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+                    </svg>
+                    <input type="range" id="volumeSlider" min="0" max="100" value="50">
+                </div>
+            </div>
+
+            <div class="playlist">
+                <h3>Playlist</h3>
+                <ul id="playlistItems" class="playlist-items">
+                    <!-- Playlist items will be added here by JavaScript -->
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 UMD Student Portfolio</p>
+    </footer>
+
+    <script src="js/music-player.js"></script>
+</body>
+</html>

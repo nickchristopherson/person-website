@@ -1,0 +1,331 @@
+/* Discovery Page Styles */
+.intro-section {
+    text-align: center;
+    background-color: var(--umd-maroon);
+    color: var(--umd-white);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+}
+
+.intro-section h2 {
+    color: var(--umd-gold);
+    margin-bottom: 1rem;
+}
+
+.discovery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem 0;
+}
+
+.discovery-card {
+    background: var(--umd-white);
+    border: 1px solid var(--umd-light-gray);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.discovery-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    padding: 1rem;
+    background-color: var(--umd-gold);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.card-header h3 {
+    color: var(--umd-maroon);
+    margin: 0;
+}
+
+.expand-icon {
+    font-size: 1.5rem;
+    color: var(--umd-maroon);
+    transition: transform 0.3s ease;
+}
+
+.card-content {
+    padding: 1.5rem;
+    display: none;
+}
+
+.card-content.active {
+    display: block;
+}
+
+.fact-list {
+    list-style: none;
+    padding: 0;
+}
+
+.fact-list li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.fact-list li:before {
+    content: "•";
+    color: var(--umd-maroon);
+    position: absolute;
+    left: 0;
+}
+
+.discovery-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.discovery-item img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.discovery-text {
+    flex: 1;
+}
+
+.discovery-text h4 {
+    margin: 0 0 0.5rem 0;
+    color: var(--umd-maroon);
+}
+
+.map-container {
+    height: 400px;
+    background-color: var(--umd-light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.life-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.life-item {
+    text-align: center;
+}
+
+.life-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.resource-link {
+    display: block;
+    padding: 1rem;
+    background-color: var(--umd-light-gold);
+    color: var(--umd-maroon);
+    text-decoration: none;
+    text-align: center;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.resource-link:hover {
+    background-color: var(--umd-gold);
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .discovery-item {
+        flex-direction: column;
+    }
+
+    .discovery-item img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .map-container {
+        height: 300px;
+    }
+}/* Company Profiles */
+.company-profile {
+    border: 1px solid var(--umd-light-gray);
+    border-radius: 4px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 1.5rem;
+}
+
+.company-logo {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    object-fit: contain;
+}
+
+.company-info h4 {
+    color: var(--umd-maroon);
+    margin: 0 0 1rem 0;
+}
+
+.company-highlights {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.company-highlights li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.company-highlights li:before {
+    content: "→";
+    color: var(--umd-maroon);
+    position: absolute;
+    left: 0;
+}
+
+.company-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--umd-maroon);
+    color: var(--umd-white);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.company-link:hover {
+    background-color: var(--umd-gold);
+    color: var(--umd-maroon);
+}
+
+/* Career Opportunities */
+.career-opportunity {
+    border: 1px solid var(--umd-light-gray);
+    border-radius: 4px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.company-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.company-header img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.opportunity-details h5 {
+    color: var(--umd-maroon);
+    margin: 0 0 1rem 0;
+}
+
+.position-description {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.fit-analysis h6 {
+    color: var(--umd-maroon);
+    margin: 0 0 0.5rem 0;
+}
+
+.fit-analysis ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.fit-analysis li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.fit-analysis li:before {
+    content: "•";
+    color: var(--umd-gold);
+    position: absolute;
+    left: 0;
+}
+
+/* Resources Grid */
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.resource-category h4 {
+    color: var(--umd-maroon);
+    margin: 0 0 1rem 0;
+}
+
+.resource-list {
+    list-style: none;
+    padding: 0;
+}
+
+.resource-list li {
+    margin-bottom: 1rem;
+}
+
+.resource-list a {
+    color: var(--umd-link-blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.resource-list a:hover {
+    color: var(--umd-maroon);
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .company-profile {
+        grid-template-columns: 1fr;
+    }
+
+    .company-logo {
+        max-width: 150px;
+        margin: 0 auto;
+    }
+
+    .company-info {
+        text-align: center;
+    }
+
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+}

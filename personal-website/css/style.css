@@ -1,0 +1,382 @@
+:root {
+    --umd-maroon: #7A0019;
+    --umd-gold: #FFB71B;
+    --umd-dark-gray: #5A5A5A;
+    --umd-light-gray: #D5D6D2;
+    --umd-white: #FFFFFF;
+    --umd-black: #1A1A1A;
+    --umd-link-blue: #0D5EAC;
+    --umd-accent-gold: #FFCD6E;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    color: var(--umd-black);
+    line-height: 1.5;
+    background-color: var(--umd-white);
+}
+
+.header {
+    background-color: var(--umd-maroon);
+    color: var(--umd-white);
+    padding: 1rem 2rem;
+    border-bottom: 4px solid var(--umd-gold);
+}
+
+.nav {
+    background-color: var(--umd-gold);
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.nav a {
+    color: var(--umd-maroon);
+    text-decoration: none;
+    padding: 0.75rem 1.25rem;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.2s ease;
+    font-size: 0.95rem;
+}
+
+.nav a:hover {
+    background-color: var(--umd-accent-gold);
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.card {
+    background-color: var(--umd-white);
+    border: 1px solid var(--umd-light-gray);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.button {
+    background-color: var(--umd-maroon);
+    color: var(--umd-white);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: var(--umd-gold);
+    color: var(--umd-maroon);
+}
+
+.footer {
+    background-color: var(--umd-maroon);
+    color: var(--umd-white);
+    padding: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+}/* Profile and About Page Styles */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.profile-image {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.hobby-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.hobby-card {
+    border: 1px solid var(--umd-light-gray);
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.hobby-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.ai-image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.ai-image-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.facts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.fact-card {
+    background-color: var(--umd-light-gold);
+    padding: 1.5rem;
+    border-radius: 4px;
+}
+
+/* Resume Page Styles */
+.experience-item {
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--umd-maroon);
+}
+
+.company {
+    color: var(--umd-dark-gray);
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.education-item {
+    margin-bottom: 1.5rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.skills-category {
+    background-color: var(--umd-white);
+    padding: 1rem;
+    border: 1px solid var(--umd-light-gray);
+    border-radius: 4px;
+}
+
+.skills-category ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.skills-category li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.skills-category li:before {
+    content: "•";
+    color: var(--umd-maroon);
+    position: absolute;
+    left: 0;
+}
+
+/* Projects/Portfolio Page Styles */
+.video-container {
+    margin: 1rem 0;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.project-card {
+    border: 1px solid var(--umd-light-gray);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.project-card img,
+.project-card video {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 1rem;
+}
+
+.project-details {
+    margin-top: 1rem;
+}
+
+.project-details ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.project-details li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.project-details li:before {
+    content: "→";
+    color: var(--umd-maroon);
+    position: absolute;
+    left: 0;
+}
+
+/* Contact Page Styles */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.contact-form {
+    background-color: var(--umd-white);
+    padding: 1.5rem;
+    border-radius: 4px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--umd-light-gray);
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.contact-info {
+    background-color: var(--umd-light-gold);
+    padding: 1.5rem;
+    border-radius: 4px;
+}
+
+.contact-info ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.contact-info li {
+    margin-bottom: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .video-container {
+        padding-bottom: 75%; /* Adjust aspect ratio for mobile */
+    }
+    
+    .hobby-grid,
+    .facts-grid,
+    .skills-grid,
+    .media-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Print Styles for Resume */
+@media print {
+    .header,
+    .nav,
+    .footer {
+        display: none;
+    }
+
+    .card {
+        border: none;
+        padding: 0;
+        margin-bottom: 1rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--umd-black);
+    }
+}/* Update nav-container to accommodate the new tab */
+.nav-container {
+    gap: 1.25rem;  /* Slightly reduced gap to fit all items */
+}
+
+.nav a {
+    padding: 0.75rem 1rem;  /* Slightly reduced padding */
+    font-size: 0.95rem;     /* Slightly reduced font size */
+}
+
+/* Additional responsive adjustments */
+@media (max-width: 900px) {
+    .nav-container {
+        gap: 0.75rem;
+    }
+
+    .nav a {
+        padding: 0.75rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}
